@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Портфолио начинающего веб-разработчика. Учусь создавать современные сайты.">
-    <title>Даниил Назаров | Начинающий веб-разработчик</title>
+    <meta name="description" content="Начинающий фулстек разработчик. Python, C#, Java, SQL, JavaScript, HTML/CSS. Берусь за небольшие проекты.">
+    <title>Даниил Назаров | Начинающий фулстек разработчик</title>
     <style>
         * {
             margin: 0;
@@ -14,13 +14,13 @@
 
         body {
             font-family: system-ui, -apple-system, 'Segoe UI', 'Inter', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
             min-height: 100vh;
             padding: 40px 20px;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
         }
 
@@ -30,19 +30,19 @@
             border-radius: 32px;
             padding: 40px;
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-            margin-bottom: 30px;
+            margin-bottom: 24px;
         }
 
         /* Шапка */
         .header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 32px;
         }
 
         .avatar {
             width: 120px;
             height: 120px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -50,21 +50,25 @@
             margin: 0 auto 20px;
             font-size: 48px;
             color: white;
+            box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.3);
         }
 
         h1 {
-            font-size: 28px;
+            font-size: 32px;
             margin-bottom: 8px;
-            color: #1e293b;
+            background: linear-gradient(135deg, #1e293b 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .badge {
             display: inline-block;
-            background: #e2e8f0;
-            padding: 4px 12px;
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            color: white;
+            padding: 6px 16px;
             border-radius: 50px;
             font-size: 14px;
-            color: #475569;
+            font-weight: 500;
             margin-bottom: 16px;
         }
 
@@ -74,7 +78,7 @@
             gap: 8px;
             background: #dcfce7;
             color: #166534;
-            padding: 6px 14px;
+            padding: 8px 16px;
             border-radius: 50px;
             font-size: 14px;
             margin-top: 12px;
@@ -95,18 +99,18 @@
 
         /* Секции */
         .section-title {
-            font-size: 20px;
+            font-size: 22px;
             font-weight: 600;
             color: #1e293b;
             margin-bottom: 20px;
             padding-bottom: 8px;
-            border-bottom: 3px solid #667eea;
+            border-bottom: 3px solid #3b82f6;
             display: inline-block;
         }
 
         .about-text {
             color: #475569;
-            line-height: 1.6;
+            line-height: 1.7;
             margin-top: 15px;
         }
 
@@ -120,17 +124,71 @@
 
         .skill-tag {
             background: #f1f5f9;
-            padding: 8px 16px;
+            padding: 8px 18px;
             border-radius: 50px;
             font-size: 14px;
-            color: #334155;
+            font-weight: 500;
+            color: #1e293b;
             transition: all 0.2s;
         }
 
         .skill-tag:hover {
-            background: #667eea;
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
             color: white;
             transform: translateY(-2px);
+        }
+
+        /* Категории навыков */
+        .skill-category {
+            margin-top: 20px;
+        }
+
+        .skill-category h3 {
+            font-size: 16px;
+            color: #334155;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Что могу сделать */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .service-card {
+            background: #f8fafc;
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.2s;
+            border: 1px solid #e2e8f0;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            border-color: #3b82f6;
+            box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.2);
+        }
+
+        .service-icon {
+            font-size: 40px;
+            margin-bottom: 12px;
+        }
+
+        .service-card h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: #1e293b;
+        }
+
+        .service-card p {
+            font-size: 14px;
+            color: #64748b;
         }
 
         /* Проекты */
@@ -138,7 +196,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
-            margin-top: 15px;
+            margin-top: 20px;
         }
 
         .project-card {
@@ -146,10 +204,12 @@
             border-radius: 20px;
             padding: 20px;
             transition: transform 0.2s;
+            border: 1px solid #e2e8f0;
         }
 
         .project-card:hover {
             transform: translateY(-4px);
+            border-color: #3b82f6;
         }
 
         .project-icon {
@@ -169,16 +229,19 @@
             margin-bottom: 12px;
         }
 
-        .project-link {
-            display: inline-block;
-            color: #667eea;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 10px;
         }
 
-        .project-link:hover {
-            text-decoration: underline;
+        .project-tech span {
+            background: #e2e8f0;
+            padding: 2px 8px;
+            border-radius: 20px;
+            font-size: 11px;
+            color: #475569;
         }
 
         /* Контакты */
@@ -186,7 +249,8 @@
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
-            margin-top: 15px;
+            margin-top: 20px;
+            justify-content: center;
         }
 
         .contact-item {
@@ -194,15 +258,16 @@
             align-items: center;
             gap: 10px;
             background: #f1f5f9;
-            padding: 10px 20px;
+            padding: 12px 24px;
             border-radius: 50px;
             text-decoration: none;
             color: #334155;
             transition: all 0.2s;
+            font-weight: 500;
         }
 
         .contact-item:hover {
-            background: #667eea;
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
             color: white;
             transform: translateY(-2px);
         }
@@ -215,7 +280,7 @@
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 12px 16px;
+            padding: 14px 18px;
             border: 1px solid #e2e8f0;
             border-radius: 16px;
             font-family: inherit;
@@ -226,23 +291,26 @@
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: #667eea;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
         }
 
         .btn {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
             color: white;
             border: none;
-            padding: 12px 28px;
+            padding: 14px 32px;
             border-radius: 50px;
             font-size: 16px;
             font-weight: 500;
             cursor: pointer;
-            transition: transform 0.2s;
+            transition: all 0.2s;
+            width: 100%;
         }
 
         .btn:hover {
             transform: translateY(-2px);
+            box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.4);
         }
 
         .form-note {
@@ -252,12 +320,23 @@
             text-align: center;
         }
 
+        /* Цитата */
+        .quote {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            border-radius: 24px;
+            padding: 24px;
+            text-align: center;
+            font-style: italic;
+            color: #475569;
+            border-left: 4px solid #3b82f6;
+        }
+
         /* Футер */
         .footer {
             text-align: center;
-            color: rgba(255, 255, 255, 0.7);
+            color: rgba(255, 255, 255, 0.6);
             font-size: 14px;
-            margin-top: 20px;
+            margin-top: 24px;
         }
 
         hr {
@@ -271,7 +350,13 @@
                 padding: 24px;
             }
             h1 {
-                font-size: 24px;
+                font-size: 26px;
+            }
+            .contacts-grid {
+                flex-direction: column;
+            }
+            .contact-item {
+                justify-content: center;
             }
         }
     </style>
@@ -285,36 +370,90 @@
                     👨‍💻
                 </div>
                 <h1>Даниил Назаров</h1>
-                <div class="badge">Начинающий веб-разработчик</div>
+                <div class="badge">Начинающий Full-Stack разработчик</div>
                 <div class="status">
                     <span class="status-dot"></span>
-                    Открыт к сотрудничеству и обучению
+                    Открыт к сотрудничеству | Берусь за небольшие проекты
                 </div>
             </div>
 
             <!-- О себе -->
             <div class="about-text">
-                <div class="section-title">📖 О себе</div>
-                <p>Привет! Меня зовут Даниил, я начинающий веб-разработчик. Учусь создавать современные, адаптивные и удобные сайты. Сейчас активно изучаю фронтенд-разработку и стремлюсь развиваться в этой сфере.</p>
-                <p style="margin-top: 12px;">Это мой первый сайт-портфолио, который я создал с нуля. Я открыт к новым проектам, готов учиться и применять полученные знания на практике.</p>
+                <div class="section-title">👋 О себе</div>
+                <p>Привет! Меня зовут Даниил, я начинающий full-stack разработчик. Увлечён созданием веб-приложений и постоянно развиваю свои навыки. Изучаю как frontend, так и backend разработку, чтобы создавать полноценные рабочие проекты.</p>
+                <p style="margin-top: 12px;">Готов взяться за разработку небольших проектов: от сайта-визитки до простого веб-приложения. Открыт к интересным задачам и готов учиться новому в процессе работы.</p>
             </div>
         </div>
 
         <!-- Навыки -->
         <div class="card">
-            <div class="section-title">🛠️ Чему учусь / что знаю</div>
-            <div class="skills-grid">
-                <span class="skill-tag">HTML5</span>
-                <span class="skill-tag">CSS3</span>
-                <span class="skill-tag">JavaScript (базовый)</span>
-                <span class="skill-tag">Адаптивная вёрстка</span>
-                <span class="skill-tag">Git / GitHub</span>
-                <span class="skill-tag">VS Code</span>
-                <span class="skill-tag">Figma (базово)</span>
+            <div class="section-title">🛠️ Технологии и языки</div>
+            
+            <div class="skill-category">
+                <h3>💻 Языки программирования</h3>
+                <div class="skills-grid">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">C#</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">HTML5 / CSS3</span>
+                </div>
             </div>
-            <p style="font-size: 14px; color: #64748b; margin-top: 16px;">
-                ⚡ Сейчас активно изучаю React и TypeScript
+
+            <div class="skill-category">
+                <h3>⚙️ Инструменты и технологии</h3>
+                <div class="skills-grid">
+                    <span class="skill-tag">Git / GitHub</span>
+                    <span class="skill-tag">VS Code</span>
+                    <span class="skill-tag">Visual Studio</span>
+                    <span class="skill-tag">SQLite / PostgreSQL</span>
+                    <span class="skill-tag">REST API (базово)</span>
+                    <span class="skill-tag">React (изучаю)</span>
+                    <span class="skill-tag">Node.js (изучаю)</span>
+                </div>
+            </div>
+
+            <p style="font-size: 14px; color: #64748b; margin-top: 20px; padding-top: 16px; border-top: 1px solid #e2e8f0;">
+                📚 Сейчас активно изучаю: React, Node.js, PostgreSQL, а также углубляю знания Python и C#
             </p>
+        </div>
+
+        <!-- Что могу сделать -->
+        <div class="card">
+            <div class="section-title">🚀 Что могу сделать для вас</div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🌐</div>
+                    <h3>Сайт-визитка</h3>
+                    <p>Адаптивный одностраничный сайт под ваш бизнес или портфолио</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>Лендинг</h3>
+                    <p>Продающая страница для вашего продукта или услуги</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🛠️</div>
+                    <h3>Веб-приложение</h3>
+                    <p>Небольшое приложение с базой данных и авторизацией</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🤖</div>
+                    <h3>Telegram бот</h3>
+                    <p>Бот для автоматизации задач на Python</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💾</div>
+                    <h3>Работа с БД</h3>
+                    <p>Проектирование и интеграция баз данных SQL</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Доработка сайтов</h3>
+                    <p>Исправление ошибок, добавление функционала</p>
+                </div>
+            </div>
         </div>
 
         <!-- Проекты -->
@@ -323,21 +462,68 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-icon">🌐</div>
-                    <h3>Сайт-визитка</h3>
-                    <p>Мой первый полноценный проект — этот сайт. Создан с нуля на HTML/CSS, адаптирован под мобильные устройства.</p>
-                    <a href="#" class="project-link">🔗 Посмотреть →</a>
+                    <h3>Сайт-портфолио</h3>
+                    <p>Мой первый полноценный проект — этот сайт. Создан с нуля на HTML/CSS, адаптирован под все устройства.</p>
+                    <div class="project-tech">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>Адаптив</span>
+                    </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-icon">📱</div>
-                    <h3>Landing Page (учебный)</h3>
-                    <p>Практическая работа по созданию продающей страницы. Использовал flexbox, grid, анимации.</p>
-                    <a href="#" class="project-link">🔗 Посмотреть →</a>
+                    <div class="project-icon">🤖</div>
+                    <h3>Telegram бот (в процессе)</h3>
+                    <p>Бот для учета задач на Python с подключением к базе данных.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>SQLite</span>
+                        <span>aiogram</span>
+                    </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-icon">🔄</div>
-                    <h3>To-Do App (в процессе)</h3>
-                    <p>Простое приложение для задач на JavaScript. Учусь работать с DOM и локальным хранилищем.</p>
-                    <a href="#" class="project-link">🔗 Скоро →</a>
+                    <div class="project-icon">📊</div>
+                    <h3>Todo App</h3>
+                    <p>Приложение для заметок и задач на JavaScript с локальным хранилищем.</p>
+                    <div class="project-tech">
+                        <span>JavaScript</span>
+                        <span>HTML/CSS</span>
+                        <span>LocalStorage</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon">💻</div>
+                    <h3>Консольное приложение</h3>
+                    <p>CRM-система для управления клиентами на C# (учебный проект).</p>
+                    <div class="project-tech">
+                        <span>C#</span>
+                        <span>.NET</span>
+                        <span>SQL Server</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Цитата / Почему я -->
+        <div class="card">
+            <div class="section-title">💡 Почему стоит выбрать меня</div>
+            <div class="quote">
+                «Я только начинаю свой путь в разработке, но это значит, что я подхожу к каждому проекту с максимальным энтузиазмом, вниманием к деталям и готовностью учиться новому. Для меня важна не просто сдача проекта, а качественный результат, который будет полезен клиенту.»
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 24px;">
+                <div style="text-align: center;">
+                    <div style="font-size: 28px; font-weight: 700; color: #3b82f6;">🎯</div>
+                    <div style="font-weight: 600; margin-top: 8px;">Ответственный подход</div>
+                    <div style="font-size: 13px; color: #64748b;">Выполняю в срок, держу связь</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 28px; font-weight: 700; color: #3b82f6;">📚</div>
+                    <div style="font-weight: 600; margin-top: 8px;">Постоянно учусь</div>
+                    <div style="font-size: 13px; color: #64748b;">Слежу за новыми технологиями</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 28px; font-weight: 700; color: #3b82f6;">💬</div>
+                    <div style="font-weight: 600; margin-top: 8px;">Доступная цена</div>
+                    <div style="font-size: 13px; color: #64748b;">Для небольших проектов и стартапов</div>
                 </div>
             </div>
         </div>
@@ -346,11 +532,11 @@
         <div class="card">
             <div class="section-title">📫 Связаться со мной</div>
             <div class="contacts-grid">
-                <a href="mailto:daniil@example.com" class="contact-item">
-                    <span>📧</span> daniil@example.com
+                <a href="https://t.me/dhyvrrf" target="_blank" class="contact-item">
+                    <span>💬</span> Telegram: @dhyvrrf
                 </a>
-                <a href="https://t.me/daniil_nazarov" target="_blank" class="contact-item">
-                    <span>💬</span> Telegram
+                <a href="mailto:nazarovdaniil638@gmail.com" class="contact-item">
+                    <span>📧</span> nazarovdaniil638@gmail.com
                 </a>
                 <a href="https://github.com/nazarovdaniil" target="_blank" class="contact-item">
                     <span>🐙</span> GitHub
@@ -368,16 +554,16 @@
                     <input type="email" name="email" placeholder="Ваш email" required>
                 </div>
                 <div class="form-group">
-                    <textarea name="message" rows="4" placeholder="Ваше сообщение..." required></textarea>
+                    <textarea name="message" rows="4" placeholder="Расскажите о вашем проекте..." required></textarea>
                 </div>
                 <button type="submit" class="btn">Отправить сообщение →</button>
-                <p class="form-note">Я отвечу в течение 1-2 дней</p>
+                <p class="form-note">Отвечу в течение 1-2 дней в Telegram или по почте</p>
             </form>
         </div>
 
         <div class="footer">
-            <p>© 2024 Даниил Назаров | Начинающий веб-разработчик</p>
-            <p style="font-size: 12px; margin-top: 8px;">Сайт создан в учебных целях</p>
+            <p>© 2024 Даниил Назаров | Начинающий Full-Stack разработчик</p>
+            <p style="font-size: 12px; margin-top: 8px;">Открыт к сотрудничеству и новым проектам</p>
         </div>
     </div>
 
@@ -400,13 +586,13 @@
                         headers: { 'Accept': 'application/json' }
                     });
                     if (response.ok) {
-                        alert('Спасибо! Сообщение отправлено. Я свяжусь с вами!');
+                        alert('Спасибо! Сообщение отправлено. Я свяжусь с вами в Telegram или по почте.');
                         form.reset();
                     } else {
                         throw new Error();
                     }
                 } catch (error) {
-                    alert('Ошибка отправки. Напишите мне напрямую в Telegram.');
+                    alert('Ошибка отправки. Напишите мне напрямую в Telegram: @dhyvrrf');
                 } finally {
                     btn.textContent = originalText;
                     btn.disabled = false;
