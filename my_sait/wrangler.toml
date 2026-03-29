@@ -1,0 +1,6 @@
+name = "sait"
+pages_build_output_dir = "./"
+
+[[kv_namespaces]]
+binding = "MY_KV"
+id = "748bb75cb3134942bcc72939c361adb4"
